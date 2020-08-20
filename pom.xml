@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.kubernetes</groupId>
 	<artifactId>spring-boot-k8S</artifactId>
-	<version>0.2.0</version>
+	<version>1.2.0</version>
 	<name>demo</name>
 	<description>Spike project for Spring Boot and k8s</description>
 
@@ -93,7 +93,7 @@
 					</execution>
 				</executions>
 				<configuration>
-					<repository>master6789/demo</repository>
+					<repository>master6789/minikube</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 						<JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
