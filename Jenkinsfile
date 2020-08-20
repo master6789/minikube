@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "master6789/demo"
+    registry = "master6789/minikube"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
