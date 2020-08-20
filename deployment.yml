@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-deployment
+  name: minikube-deployment
   labels:
     app: demo-app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: demo-app
@@ -16,9 +16,10 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: master6789/demo
+        image: master6789/minikube
         ports:
-        - containerPort: 8082
+        - containerPort: 8089
+          
 ---
 apiVersion: v1
 kind: Service
@@ -29,8 +30,8 @@ spec:
     app: demo-app
   type: NodePort  
   ports:
-    - port: 8082
-      targetPort: 8082
+    - port: 8089
+      targetPort: 8089
       nodePort: 30008
 ---
 apiVersion: policy/v1beta1
